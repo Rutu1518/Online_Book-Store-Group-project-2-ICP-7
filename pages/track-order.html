@@ -133,9 +133,10 @@
                                           <label for="AWBnumber" id="input_header">AWB Number</label>
                                            
                                           <input type="text" class="form-control form-control-md" id="myInput"
-                                                placeholder="Enter your details here">
+                                                placeholder="Enter your details here" onkeyup="message(  )">
                                         </div>
-                                        <button type="submit" class="btn btn-success mt-2" onclick="checkSubmitt()">Submit</button>
+                                        <div id="orderID-message"></div>
+                                        <button type="submit" class="btn btn-success mt-2" >Submit</button>
                                     </form>
                                 </div>
                             </div>
