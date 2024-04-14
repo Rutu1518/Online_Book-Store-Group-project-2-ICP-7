@@ -9,3 +9,14 @@ function changeText(btnnum) {
     }
     
 }
+
+function checkSubmitt() {
+    const element = document.getElementById('myInput');
+    if (element.value == 101) {
+        
+        alert(element.value+ ' is  correct procees to next page' );
+    }
+    else {
+        alert(element.value+ ' is not correct' );
+    }
+}
