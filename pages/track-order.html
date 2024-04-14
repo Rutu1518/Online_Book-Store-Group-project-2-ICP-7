@@ -12,31 +12,32 @@
     <link rel="stylesheet" href="../css/track-order.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css" />
+    <script src="../js/track-order.js"></script>
     <title>Wonder Words</title>
 </head>
 
 <body>
 
 
-    <!--
+<!--
      Note : Add Bootstrap link
     <link rel="stylesheet" href="../css/header.css">
 -->
 
-    <!-- Navbar -->
- <nav class="navbar navbar-expand-lg  fixed-top" style="font-size: 22px;height: 100px;background-color:#FAEED1;">
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg  fixed-top" style="font-size: 22px;height: 80px;background-color:#FAEED1;">
   <div class="container-fluid">
   
-  <img src="../logo/Wonder-Words-logo.png" alt="cart" style="height: 150px; margin-top: 40px;"></a>
+  <img src="../logo/Wonder-Words-logo.png" alt="cart" style="height: 120px; margin-top: 40px;"></a>
     
     <a class="navbar-brand" href="#" style="margin-top:70px; font-size: 35px;margin-left: -180px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 170px;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 300px;">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.html" style="margin-left:340px;margin-top: 10px;">Home</a>
+          <a class="nav-link active" aria-current="page" href="../index.html" style="margin-left:400px;margin-top: 10px;">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./about-us.html" style="margin-left: 50px;margin-top: 10px;">About Us</a>
@@ -45,18 +46,18 @@
           <a class="nav-link active" aria-current="page" href="./contact.html" style="margin-left: 50px;margin-top: 10px;">Contact Us</a>
         </li>
        
-        <li class="nav-item dropdown"  style="margin-left:50px ;margin-top: 10px;">
+        <li class="nav-item dropdown"  style="margin-left:40px ;margin-top: 10px;">
           <a class="nav-link dropdown-toggle" active href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             Find Your Kind
           </a>
-          <ul class="dropdown-menu" style="background-color: #FAEED1;">
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href="./bestseller.html">Best Sellers</a></li>
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href="./new-arrrival.html">New Arrivals</a></li>
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href="./kids-book.html">Kids Books</a></li>
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href=".">Award Winners</a></li>
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href="./Non-Fiction-book.html">Non-Fiction Books</a></li>
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href="../index.html">Daily Deals</a></li>
-            <li><a class="dropdown-item text-black" style="background-color: #FAEED1;" href="./Coffee-table-book.html">Coffee Table Books</a></li>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./bestseller.html">Best Sellers</a></li>
+            <li><a class="dropdown-item" href="./new-arrrival.html">New Arrivals</a></li>
+            <li><a class="dropdown-item" href="./kids-book.html">Kids Books</a></li>
+            <li><a class="dropdown-item" href=".">Award Winners</a></li>
+            <li><a class="dropdown-item" href="./Non-Fiction-book.html">Non-Fiction Books</a></li>
+            <li><a class="dropdown-item" href="../index.html">Daily Deals</a></li>
+            <li><a class="dropdown-item" href="./Coffee-table-book.html">Coffee Table Books</a></li>
            
           </ul>
         </li>
@@ -86,7 +87,7 @@
 ></script>
 </nav>
 <!-- Navbar End -->
-
+  
     <hr class="">
     <div class="container-fluid py-3 shadow " style="margin-top: 65px;">
         <div class="row">
@@ -114,13 +115,13 @@
                                     <form method="post" action="#">
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" checked="" name="track_with"
-                                                id="inlineRadio1" value="awb">
+                                                id="inlineRadio1" value="awb" onclick="changeText('radio1')">
                                             <label class="form-check-label" for="inlineRadio1">AWB No.</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="track_with"
-                                                id="inlineRadio2" value="order_id">
-                                            <label class="form-check-label" for="inlineRadio2">Order ID</label>
+                                                id="inlineRadio2" value="order_id" onclick="changeText('radio2')">
+                                            <label class="form-check-label" for="inlineRadio2" >Order ID</label>
                                         </div>
                                         <div class="form-group mt-4 order_id_track_box" style="display: none;">
                                             <label for="OrderID">Order ID</label>
@@ -128,11 +129,11 @@
                                                 placeholder="Enter Order Id">
                                         </div>
                                         <div class="form-group mt-4 awb_track_box">
-                                            <label for="AWBnumber">AWB Number</label>
+                                            <label for="AWBnumber" id="input_header">AWB Number</label>
                                             <input type="text" class="form-control form-control-md" name="awb_number"
-                                                placeholder="Enter your Airway Bill/Tracking Number">
+                                                placeholder="Enter your details here">
                                         </div>
-                                        <button type="submit" class=" py-2 px-4">Submit</button>
+                                        <button type="submit" class=" add_to_cart">Submit</button>
                                     </form>
                                 </div>
                             </div>
